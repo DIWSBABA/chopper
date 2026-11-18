@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="theme-color" content="#10142d" />
+  <title>Chopper's little world ✦</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">✦</span><span>CHOPPER<span class="brand-small">'S LITTLE WORLD</span></span></a>
+      <div class="top-right"><span class="live-dot"></span><span>Dein kleiner Begleiter</span><button id="soundToggle" class="icon-button" title="Sound">♫</button></div>
+    </header>
+
+    <main>
+      <section class="intro"><div class="eyebrow">EIN KLEINES ABENTEUER FÜR ZWEI</div><h1>Ein Herz für <span>Chopper.</span></h1><p>Füttere ihn, spiel mit ihm und pass auf ihn auf. Er wartet schon auf dich.</p></section>
+      <section class="game-grid">
+        <div class="pet-panel panel">
+          <div class="panel-top"><div><span class="tiny-label">DEIN PET</span><h2>Tony Tony Chopper</h2></div><div id="moodChip" class="mood-chip">♡ Glücklich</div></div>
+          <div class="scene" id="scene">
+            <div class="scene-stars"><span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>·</span><span>✦</span></div>
+            <div class="floor-glow"></div><div class="pet-shadow"></div>
+            <div class="pet-wrap" id="petWrap"><img id="petImage" class="pet-image" src="assets/chopper1.png" alt="Chopper" draggable="false" /></div>
+            <div class="pet-nameplate"><span class="name-heart">♥</span> Chopper <span class="level">LV. 01</span></div>
+            <div class="scene-hint"><span class="mouse-icon">↔</span> Halten & drehen</div>
+            <div id="speech" class="speech">Heeey! Schön, dass du da bist! ♡</div>
+          </div>
+          <div class="pet-actions"><button class="action primary" data-action="feed"><span class="action-icon">🍖</span><span>Füttern</span></button><button class="action" data-action="play"><span class="action-icon">⚽</span><span>Spielen</span></button><button class="action" data-action="pet"><span class="action-icon">♡</span><span>Knuddeln</span></button><button class="action" data-action="sleep"><span class="action-icon">🌙</span><span>Schlafen</span></button></div>
+          <div class="daily-note"><span class="note-icon">✧</span><span><strong>Deine tägliche Mission</strong><br />Chopper braucht jeden Tag ein bisschen Liebe. Schau regelmäßig vorbei!</span></div>
+        </div>
+        <aside class="side-column">
+          <div class="panel status-panel"><div class="panel-heading"><div><span class="tiny-label">CHOPPERS ZUSTAND</span><h3>Wie geht's ihm?</h3></div><span class="status-orb">♡</span></div>
+            <div class="stat" data-stat="hunger"><div class="stat-label"><span>🍙 Hunger</span><b id="hungerText">84%</b></div><div class="meter"><div class="meter-fill hunger-fill" id="hungerFill"></div></div></div>
+            <div class="stat" data-stat="happiness"><div class="stat-label"><span>✨ Glück</span><b id="happinessText">92%</b></div><div class="meter"><div class="meter-fill happiness-fill" id="happinessFill"></div></div></div>
+            <div class="stat" data-stat="energy"><div class="stat-label"><span>⚡ Energie</span><b id="energyText">75%</b></div><div class="meter"><div class="meter-fill energy-fill" id="energyFill"></div></div></div>
+            <div class="stat" data-stat="health"><div class="stat-label"><span>💗 Gesundheit</span><b id="healthText">100%</b></div><div class="meter"><div class="meter-fill health-fill" id="healthFill"></div></div></div>
+            <div class="status-message" id="statusMessage"><span>🌟</span> Chopper ist fit und fühlt sich pudelwohl!</div>
+          </div>
+          <div class="panel inventory-panel"><div class="panel-heading"><div><span class="tiny-label">DEIN RUCKSACK</span><h3>Leckere Sachen</h3></div><span class="bag-icon">🎒</span></div><div class="food-row"><div class="food-item"><span class="food-emoji">🍖</span><span>Fleisch</span><b id="meatCount">5</b></div><div class="food-item"><span class="food-emoji">🍬</span><span>Naschi</span><b id="candyCount">3</b></div><div class="food-item"><span class="food-emoji">🍄</span><span>Pilze</span><b id="mushroomCount">2</b></div></div><div class="inventory-tip">Füttere Chopper mit seinen Lieblingssnacks.</div></div>
+          <div class="panel bond-panel"><span class="tiny-label">EURE FREUNDSCHAFT</span><div class="bond-title"><strong id="bondLevel">Level 1</strong><span id="bondPoints">12 / 100 XP</span></div><div class="meter bond-meter"><div id="bondFill" class="meter-fill"></div></div><p>Jede gemeinsame Aktion stärkt eure Bindung.</p></div>
+        </aside>
+      </section>
+      <footer><span>Gemacht mit <span class="footer-heart">♥</span> und ganz viel Liebe</span><span>Ein kleines Geschenk für deinen Lieblingsmenschen ✧</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
